@@ -1,3 +1,7 @@
+/**
+ * Index:
+ * Componente principal que llama <stack.screen> como pantalla principal de _layout.tsx
+ */
 import { animationMenuRoutes, menuRoutes, uiMenuRoutes } from "@/constants/Routes";
 import MenuItem from "@/presentations/menu/MenuItem";
 import ThemedView from "@/presentations/shared/ThemedView";

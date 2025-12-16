@@ -1,3 +1,7 @@
+/**
+ * MenuItem:
+ * Componente par los ítems del menú de pantalla principal "Index".
+ */
 import { useThemeColor } from "@/components/Themed";
 import { Ionicons } from "@expo/vector-icons";
 import { Href, router } from "expo-router";
