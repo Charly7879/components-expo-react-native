@@ -46,7 +46,7 @@ const MenuItem = ({
         >
             <View className="flex-row items-center">
                 <Ionicons name={icon} size={30} color={primaryColor} className="mr-5" />
-                <ThemedText type="h3">{title}</ThemedText>
+                <ThemedText type="h3" className="mt-0">{title}</ThemedText>
             </View>
         </Pressable>
     );
