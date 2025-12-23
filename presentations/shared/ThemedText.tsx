@@ -20,7 +20,7 @@ const ThemedText = ({
     return (
         <Text
             className={[
-                'mt-10 text-light-primary dark:text-dark-primary',
+                'text-light-primary dark:text-dark-primary',
                 type === 'normal' ? 'font-normal' : undefined,
                 type === 'h1' ? 'text-3xl' : undefined,
                 type === 'h2' ? 'text-2xl' : undefined,
