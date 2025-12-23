@@ -1,5 +1,4 @@
 import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
@@ -13,6 +12,7 @@ import { useColorScheme } from '@/components/useColorScheme';
  * https://docs.swmansion.com/react-native-gesture-handler/docs/fundamentals/installation
  */
 import { allRoutes } from '@/constants/Routes';
+import { ThemeChangerProvider } from '@/presentations/context/ThemeChangerContext';
 import { Stack } from 'expo-router';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { useThemeColor } from './../components/Themed';
@@ -69,7 +69,8 @@ function RootLayoutNav() {
 
   return (
     <GestureHandlerRootView style={{ backgroundColor: backgroudColor, flex: 1 }}>
-      <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+      {/* <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}> */}
+      <ThemeChangerProvider>
         <Stack
           screenOptions={{
             headerShadowVisible: false,
@@ -99,7 +100,8 @@ function RootLayoutNav() {
             ))
           }
         </Stack>
-      </ThemeProvider>
+        {/* </ThemeProvider> */}
+      </ThemeChangerProvider>
     </GestureHandlerRootView>
   );
 }
